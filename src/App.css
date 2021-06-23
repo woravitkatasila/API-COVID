@@ -1,0 +1,142 @@
+body{
+  font-family: 'Kanit', sans-serif;
+  background-color: #f0f2f5;
+}
+.block1{
+  padding:  5%;
+}
+.bgHead{
+  background-color: rgb(56, 49, 71);
+}
+.bgBlue{
+  /*background-color: rgb(82, 38, 185);*/
+  background-color: rgb(56, 49, 71);
+}
+.block2 , .block3,.block4 ,.block5,.block6,.block7,.block8{
+  color:white;
+  min-height: 130px;
+  padding: 13px;
+  overflow: hidden;
+  margin: 8px 0px;
+  text-align: center;
+  border-radius: 15px;
+}
+.block2{
+  background-color: rgb(248, 143, 73);
+
+}
+.block3{
+  background-color: rgba(34, 238, 253, 0.781);
+ 
+}
+.block4{
+  background-color: rgb(56, 49, 71);
+  border-radius: 0px;
+}
+.block5{
+  background-color: #ecb800 ;
+}
+.block6{
+  background-color: #179C9B;
+}
+.block7{
+  background-color: #039245;
+}
+.block8{
+  background-color: #d22d36;
+}
+/*****************/
+.bgBlue2{
+  background-color: rgb(62, 87, 102);
+}
+
+/*******************/
+.search-container {
+  width: 100%;
+}
+
+.search-container input[type=text] {
+  padding: 10px 6px;
+  font-size: 17px;
+  border: none;
+  outline: none;
+  width: 90%;
+  float: left;
+}
+
+.search-container button {
+  float: left;
+  padding: 10px 30px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background: #ccc;
+}
+
+
+@media screen and (max-width: 1317px) {
+  .search-container {
+    display: inline-block;
+    text-align: center;
+  }
+  .search-container input[type=text] {
+    float: none;
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .search-container button {
+    float: none;
+    margin-top:  5px; 
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 8px 40px;
+  }
+
+}
+
+
+  .aTable-body td {
+    padding: 12px 12px ;
+    text-align: center;
+    color:rgb(25, 25, 180);
+  }
+ .aTable-body:nth-child(even){
+    background-color: white;
+    border: 1px solid #dddddd;
+  }
+  .aTable-body:hover {
+    background-color: rgb(215, 215, 238);
+  }
+
+.aTable{
+    width: 100%;
+    background-color:  #EFF2F9;
+    border-collapse: collapse;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+    border: 1px solid #dddddd;
+    margin-bottom: 10px;
+}
+.aTable-head{
+  background-color:  #e0e3eb;
+}
+.aTable-head td{
+  color: rgb(41, 41, 41);
+  text-align: center;
+  padding:10px 10px ;
+  cursor: pointer;
+}
+.overflow-x{
+  overflow-x:auto;
+}
+.aTable-head span{
+  opacity: 0.5;
+  pointer-events: none;
+}
+.active{
+  opacity: 1 !important;
+}
