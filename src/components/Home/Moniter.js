@@ -24,7 +24,7 @@ function Moniter(props) {
     }
 
     function chkNum(num) {
-        if (num != 0 && num > 0) {
+        if (num !== 0 && num > 0) {
             return addCommas(parseFloat(num))
         } else {
             return "unreported";

@@ -10,27 +10,27 @@ function Moniter2(props) {
     const setTableLess=(id) =>{
         // ลศ 0 ขึ้น น้อยไปมาก   Aless
         let mockData = data;
-        if (id == "NewConfirmed") {
+        if (id === "NewConfirmed") {
             mockData.sort((firstItem, secondItem) => firstItem.NewConfirmed - secondItem.NewConfirmed);
          
         }
-        if (id == "TotalConfirmed") {
+        if (id === "TotalConfirmed") {
             mockData.sort((firstItem, secondItem) => firstItem.TotalConfirmed - secondItem.TotalConfirmed);
          
         }
-        if (id == "NewDeaths") {
+        if (id === "NewDeaths") {
             mockData.sort((firstItem, secondItem) => firstItem.NewDeaths - secondItem.NewDeaths);
    
         }
-        if (id == "TotalDeaths") {
+        if (id === "TotalDeaths") {
             mockData.sort((firstItem, secondItem) => firstItem.TotalDeaths - secondItem.TotalDeaths);
       
         }
-        if (id == "NewRecovered") {
+        if (id === "NewRecovered") {
             mockData.sort((firstItem, secondItem) => firstItem.NewRecovered - secondItem.NewRecovered);
       
         }
-        if (id == "TotalRecovered") {
+        if (id === "TotalRecovered") {
             mockData.sort((firstItem, secondItem) => firstItem.TotalRecovered - secondItem.TotalRecovered);
             
         }
@@ -38,22 +38,22 @@ function Moniter2(props) {
     }
     const setTableThan=(id)=> {
         let mockData = data;
-        if (id == "NewConfirmed") {
+        if (id === "NewConfirmed") {
             mockData.sort((firstItem, secondItem) => secondItem.NewConfirmed - firstItem.NewConfirmed);
         }
-        if (id == "TotalConfirmed") {
+        if (id === "TotalConfirmed") {
             mockData.sort((firstItem, secondItem) => secondItem.TotalConfirmed - firstItem.TotalConfirmed);
         }
-        if (id == "NewDeaths") {
+        if (id === "NewDeaths") {
             mockData.sort((firstItem, secondItem) => secondItem.NewDeaths - firstItem.NewDeaths);
         }
-        if (id == "TotalDeaths") {
+        if (id === "TotalDeaths") {
             mockData.sort((firstItem, secondItem) => secondItem.TotalDeaths - firstItem.TotalDeaths);
         }
-        if (id == "NewRecovered") {
+        if (id === "NewRecovered") {
             mockData.sort((firstItem, secondItem) => secondItem.NewRecovered - firstItem.NewRecovered);
         }
-        if (id == "TotalRecovered") {
+        if (id === "TotalRecovered") {
             mockData.sort((firstItem, secondItem) => secondItem.TotalRecovered - firstItem.TotalRecovered);
         }
         return mockData
@@ -64,7 +64,7 @@ function Moniter2(props) {
         // ลศ 0 ขึ้น น้อยไปมาก   Aless  ลศ 1 ลง มากไปน้อย  Athan
 
         for (let x = 0; x < listCovid.length; x++) {
-            if (e.target.id != listCovid[x]) {
+            if (e.target.id !== listCovid[x]) {
                 let eleTableHead = document.getElementById(listCovid[x])
                 eleTableHead.classList = "";
                 eleTableHead.children[0].classList = ""
@@ -106,7 +106,7 @@ function Moniter2(props) {
     }
 
     const chkNum=(num)=> {
-        if (num != 0 && num > 0) {
+        if (num !== 0 && num > 0) {
             return addCommas(parseFloat(num))
         } else {
             return "unreported";
@@ -176,18 +176,17 @@ function Moniter2(props) {
                                 </thead>
                                 <tbody>
                                     {
-                           data.map(i =>
-                            <tr key={i.ID} className='aTable-body'>
-                                <td>{conDate(i.Date)}</td>
-                                <td>{i.Country}</td>
-                                <td>{chkNum(i.NewConfirmed)}</td>
-                                <td>{chkNum(i.TotalConfirmed)}</td>
-                                <td>{chkNum(i.NewRecovered)}</td>
-                                <td>{chkNum(i.TotalRecovered)}</td>
-                                <td>{chkNum(i.NewDeaths)}</td>
-                                <td>{chkNum(i.TotalDeaths)}</td>
-                            </tr>
-                        )
+                                         data.map(i =>
+                                            <tr key={i.ID} className='aTable-body'>
+                                                <td>{conDate(i.Date)}</td>
+                                                <td>{i.Country}</td>
+                                                <td>{chkNum(i.NewConfirmed)}</td>
+                                                <td>{chkNum(i.TotalConfirmed)}</td>
+                                                <td>{chkNum(i.NewRecovered)}</td>
+                                                <td>{chkNum(i.TotalRecovered)}</td>
+                                                <td>{chkNum(i.NewDeaths)}</td>
+                                                <td>{chkNum(i.TotalDeaths)}</td>
+                                            </tr>)
                                     }
                                 </tbody>
                             </table>
